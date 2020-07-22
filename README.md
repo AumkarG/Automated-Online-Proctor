@@ -5,7 +5,7 @@ An multi modal automated proctor for online exams
 
 ### Results :
 
-<img src="./final/media/download (1).png" width="40%">.
+<img src="./media/download (1).png" width="40%">.
 <img src="./Wine-Classifier-master/media/download (2).png" width="40%">.
 <img src="./Wine-Classifier-master/media/download (3).png" width="40%">.
 
