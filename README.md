@@ -20,16 +20,16 @@ An multi modal automated proctor for online exams
 8) FaceNet: A Unified Embedding for Face Recognition and Clustering
 
 #### Publications :
-1. D. L. King and C. J. Case., “E-cheating: Incidence and trends among-college students.” inIssues in Information Systems, vol. 15, 2014.
+1. D. L. King and C. J. Case., “E-cheating: Incidence and trends among-college students.” in Issues in Information Systems, vol. 15, 2014.
 2. D.  Varble,  “Reducing  cheating  opportunities  in  online  test,”AtlanticMarketing Journal, 09 2014.
 3. E.  Flior  and  K.  Kowalski,  “Continuous  biometric  user  authenticationin  online  examinations,”  in2010  Seventh  International  Conference  onInformation Technology: New Generations, 2010, pp. 488–492.
 4. M. McGinity, “Let your fingers do the talking,”Commun. ACM, vol. 48,pp. 21–23, 01 2005.  
-5. A. Javed and Z. Aslam, “An intelligent alarm based visual eye trackingalgorithm for cheating free examination system,”International Journalof Intelligent Systems and Applications, vol. 5, pp. 86–92, 09 2013.
+5. A. Javed and Z. Aslam, “An intelligent alarm based visual eye trackingalgorithm for cheating free examination system,”International Journal of Intelligent Systems and Applications, vol. 5, pp. 86–92, 09 2013. 
 6. S. S. Chua, J. B. Bondad, Z. R. Lumapas, and J. D. L. Garcia, “Onlineexamination system with cheating prevention using question bank ran-domization  and  tab  locking,”  in 2019  4th  International  Conference  onInformation Technology (InCIT), 2019, pp. 126–131.
 7. R.  Bawarith,  D.  Abdullah,  D.  Anas,  and  P.  Dr,  “E-exam  cheatingdetection system,”International Journal of Advanced Computer Scienceand Applications, vol. 8, 04 2017.
-8. A. A. Sukmandhani and I. Sutedja, “Face recognition method for onlineexams,” in2019 International Conference on Information Managementand Technology (ICIMTech), vol. 1, 2019, pp. 175–179.
-9. S.  Sawhney,  K.  Kacker,  S.  Jain,  S.  N.  Singh,  and  R.  Garg,  “Real-time  smart  attendance  system  using  face  recognition  techniques,”  in2019 9th International Conference on Cloud Computing, Data ScienceEngineering (Confluence), 2019, pp. 522–525.[10]  
-10. Y. Atoum, L. Chen, A. X. Liu, S. D. H. Hsu, and X. Liu, “Automatedonline  exam  proctoring,”IEEE  Transactions  on  Multimedia,  vol.  19,no. 7, pp. 1609–1624, 2017.
+8. A. A. Sukmandhani and I. Sutedja, “Face recognition method for onlineexams,” in 2019 International Conference on Information Managementand Technology (ICIMTech), vol. 1, 2019, pp. 175–179.
+9. S.  Sawhney,  K.  Kacker,  S.  Jain,  S.  N.  Singh,  and  R.  Garg,  “Real-time  smart  attendance  system  using  face  recognition  techniques,”  in 2019 9th International Conference on Cloud Computing, Data ScienceEngineering (Confluence), 2019, pp. 522–525.[10]  
+10. Y. Atoum, L. Chen, A. X. Liu, S. D. H. Hsu, and X. Liu, “Automated online  exam  proctoring,”IEEE  Transactions  on  Multimedia,  vol.  19,no. 7, pp. 1609–1624, 2017.
 11. Liu Siyao and Gong Qianrang, “The research on anti-cheating strategyof online examination system,” in2011 2nd International Conference onArtificial  Intelligence,  Management  Science  and  Electronic  Commerce(AIMSEC), 2011, pp. 1738–1741.
 12. S. Prathish, A. N. S., and K. Bijlani, “An intelligent system for onlineexam  monitoring,”  in2016  International  Conference  on  InformationScience (ICIS), 2016, pp. 138–143.
 13. G.  Kasliwal,  “Cheating  detection  in  online  examinations,”Master’sProject, 2015.
