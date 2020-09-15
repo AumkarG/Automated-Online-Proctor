@@ -10,6 +10,8 @@ An multi modal automated proctor for online exams
 
 
 ### References :
+
+#### Blogs, websites, tutorials, github repositories :
 1) https://www.pyimagesearch.com/2017/05/08/drowsiness-detection-opencv/
 2) https://github.com/yinguobing/head-pose-estimation
 3) https://github.com/antoinelame/GazeTracking
