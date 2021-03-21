@@ -115,7 +115,7 @@ The fuzzy logic classifier will have a rule base set for the specific flags and 
 
 Face Mask using DLIB            | Head Movement | Eye processing to locate pupil
 :-------------------------:|:-------------------------:|:-------------------------:
-![mg1](https://drive.google.com/uc?export=view&amp;id=1UZwUYH21PT_eNSsz_uxZzu5GhlG-zitS){width=75%} | ![img2](https://drive.google.com/uc?export=view&amp;id=1u9QDhdAGee0BEoZqdYVoyZ3ZDF11TIAl){width=75%} |   ![img3](https://drive.google.com/uc?export=view&amp;id=13v8MQi2FNNEYVG7_qtP1uZCxOQng_QoN){width=75%}
+![mg1](https://drive.google.com/uc?export=view&amp;id=1UZwUYH21PT_eNSsz_uxZzu5GhlG-zitS){width=30%} | ![img2](https://drive.google.com/uc?export=view&amp;id=1u9QDhdAGee0BEoZqdYVoyZ3ZDF11TIAl){width=35%} |   ![img3](https://drive.google.com/uc?export=view&amp;id=13v8MQi2FNNEYVG7_qtP1uZCxOQng_QoN){width=35%}
 
 ## **4. Technology Stack**
 * Frontend - HTML, CSS, JavaScript, ReactJs
