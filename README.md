@@ -1,7 +1,7 @@
 # Automated-Online-Proctor
 An multi modal automated proctor for online exams 
 
-![image](https://drive.google.com/uc?export=view&amp;id=1BYY_W6FPk5lUpe3D3uezw8iX4HwUR8qd){ width=80% }
+![image](https://drive.google.com/uc?export=view&amp;id=1BYY_W6FPk5lUpe3D3uezw8iX4HwUR8qd)
 
 # [EduVision](https://drive.google.com/file/d/1Y_jfNiyZLEzi1eiCqkztw63TbTPjA7bl/view?usp=sharing) - AI support for e-learning
 
@@ -57,7 +57,7 @@ Prerequisite library : [OpenPose](https://arxiv.org/abs/1812.08008), a software 
 6. To minimize spurious alerts, a window of recent frames can be sampled to determine the prominent posture in that duration.
 
 	
-![img](https://drive.google.com/uc?export=view&amp;id=13aS1YTyL4-WM-9B4ubkarkspjwQpRoxf){width=80%}
+![img](https://drive.google.com/uc?export=view&amp;id=13aS1YTyL4-WM-9B4ubkarkspjwQpRoxf)
 	
 
 #### **3.1.2. Emotion inference from facial expressions**
@@ -90,7 +90,7 @@ The drowsiness measure, observed emotions, and posture will be combined using a 
 
 ### **3.2. Detecting malpractices during online examinations**
 
-![image](https://drive.google.com/uc?export=view&amp;id=1sBPZ5SCxuP8qwSdUFjZg-JzXIjuFnPD-){width=50%}
+![image](https://drive.google.com/uc?export=view&amp;id=1sBPZ5SCxuP8qwSdUFjZg-JzXIjuFnPD-)
 
 In case the image does not load, click [here](https://drive.google.com/file/d/1sBPZ5SCxuP8qwSdUFjZg-JzXIjuFnPD-/view?usp=sharing) for implementation diagram
 **Five fold approach** consisting of **facial recognition**, followed by **tracking head, eye and mouth movements,**  along with **detection of cheating material.**
@@ -115,7 +115,7 @@ The fuzzy logic classifier will have a rule base set for the specific flags and 
 
 Face Mask using DLIB            | Head Movement | Eye processing to locate pupil
 :-------------------------:|:-------------------------:|:-------------------------:
-![mg1](https://drive.google.com/uc?export=view&amp;id=1UZwUYH21PT_eNSsz_uxZzu5GhlG-zitS){width=30%} | ![img2](https://drive.google.com/uc?export=view&amp;id=1u9QDhdAGee0BEoZqdYVoyZ3ZDF11TIAl){width=35%} |   ![img3](https://drive.google.com/uc?export=view&amp;id=13v8MQi2FNNEYVG7_qtP1uZCxOQng_QoN){width=35%}
+![mg1](https://drive.google.com/uc?export=view&amp;id=1UZwUYH21PT_eNSsz_uxZzu5GhlG-zitS) | ![img2](https://drive.google.com/uc?export=view&amp;id=1u9QDhdAGee0BEoZqdYVoyZ3ZDF11TIAl) |   ![img3](https://drive.google.com/uc?export=view&amp;id=13v8MQi2FNNEYVG7_qtP1uZCxOQng_QoN)
 
 ## **4. Technology Stack**
 * Frontend - HTML, CSS, JavaScript, ReactJs
