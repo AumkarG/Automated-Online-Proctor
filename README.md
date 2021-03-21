@@ -1,7 +1,131 @@
 # Automated-Online-Proctor
 An multi modal automated proctor for online exams 
 
+![image](https://drive.google.com/uc?export=view&amp;id=1BYY_W6FPk5lUpe3D3uezw8iX4HwUR8qd){ width=80% }
 
+# [EduVision](https://drive.google.com/file/d/1Y_jfNiyZLEzi1eiCqkztw63TbTPjA7bl/view?usp=sharing) - AI support for e-learning
+
+## **1. Introduction**
+
++ COVID-19 has caused the already surging online education market to boom further. The  growing  popularity  of  MOOC courses   and   the   changing education   landscape   could   mean more  and  more  people  switching  to  online  education.
++ While useful without a doubt, online education has one major drawback : lack of control. Teachers cannot clearly monitor the activity of their students. This results in two major problems: 
+> 1. The lack of supervision during lectures leads to a lower retentivity and poorer learning experience as **students are easily distracted.**
+> 2. The second major area affected is the **evaluation process**, where students resort to **unfair means** during quizzes and tests. This leads to marks and possibly degree obtained being questionable			
++ EduVision proposes AI-Enabled solutions to tackle this lack of supervision. The proposed solution will require just a laptop with a functioning webcam and microphone. Computer Vision is incorporated to detect student emotions, expressions, head and eye movements and other activity to gauge their attentivity and prevent malpractices.
+
+## **2. Features of EduVision**
+EduVision aims to automate supervision in online education, be it during lectures or online examinations. We aim to achieve these two objectives with the help of Machine learning and Computer Vision techniques to fully automate this process. 
+Not only does this method prove to be cost efficient, but it also reduces the burden for teachers who have to expend their energy and time in monitoring their students.
+The module-wise features of EduVision are listed below:
+
+* **MODULE 1 - Attention detection:** The largest seback of online learning is its one-way stream. When teachers proceed with their lectures, active engagement from the students is also necessary lest the students lose interest. While there are no ways to ensure active engangement, we can certainly detect a student's attentiveness and allow the teacher to leverage this knowledge to modify their lesson plans. Since webcams allow focused view of each student, we can make use of this data to identify various patterns and signs. This module is primarily focuses on detecting these signs in an online lecture environment. :
+
+> 1.   Students’ posture and body language
+2.   Students’ emotions detected from facial expressions
+3.   Sleepiness or drowsiness signs inthe student.
+
+![image](https://drive.google.com/uc?export=view&amp;id=1JeTGFfJLmpROZtjDqpu-8_WvVuywCGJS)
+
+* **MODULE 2 - Detecting malpractices in online examinations:** Due to the limited field of view in webcams, examinations tend to be the most challenging part of virtual learning. Furthermore, constant video streams from hundreds of students lead to heavy bandwidth consumption, causing packet loss and consequently frame loss, for the invigilator online. Thus, the stream-based proctoring tends to perform poorly and does not serve its purpose. We require a scalable solution that can handle the traits of a test environment efficaciously. To do so, we introduce a proctoring method that tracks students' activities on their local machines and sends the consoliated report to the examiner. The proctor makes use of the following *five* crucial components to deduce the information:
+
+> 1.   Face Authentication
+2.   Head-pose Estimation
+3.   Eye Tracking
+4.   Speech Detection
+5.   Detection of proscribed objects
+
+
+![image](https://drive.google.com/uc?export=view&amp;id=1H6KfiXMaHXeEsKt4esN4A1UXxwvEG7bx)
+
+(click here in case the images showing feature overview didn't load) [Overview diagram](https://drive.google.com/drive/folders/1elvubnvj_2EMJTL8FOml3LjYbZFlliCS?usp=sharing)
+
+## **3. Proposed implementation**
+
+### **3.1. Attention detection during online lectures**
+
+We propose to monitor students’ attentivity in online lectures by considering certain metrics. Taking  into  account posture analysis ,  emotion  inference from  facial  expressions and sleepiness experienced by the students, we propose to detect the attention span during online lectures.
+
+Prerequisite library : [OpenPose](https://arxiv.org/abs/1812.08008), a software that generates skeletal representations of a person’s posture.
+
+#### **3.1.1. Posture analysis** 
+
+1. The  human  body  can  be  used  to  detect  an  individual’s presence  of  mind  through  their  posture. When attentive, the person’s posture is firm whereas a distracted student tends  to  not  look  at  the  screen,  lean  back  and so on.
+2. We propose a posture based classifier which can tell if a student is attentive or not.
+3. The candidate’s image is fed through OpenPose to generate posture based representations. (See [diagram](https://drive.google.com/file/d/1qki1GlLZRbQaW485CSCpi6OWNuR0KK-s/view?usp=sharing))
+4. We propose a convolutional neural network trained on these OpenPose representations of various postures in an online environment.
+5. The classifier will identify 5 prominent postures : Attentive, Head rested on their hand, Leaning back, Writing. Not looking at the screen.
+6. To minimize spurious alerts, a window of recent frames can be sampled to determine the prominent posture in that duration.
+
+	
+![img](https://drive.google.com/uc?export=view&amp;id=13aS1YTyL4-WM-9B4ubkarkspjwQpRoxf){width=80%}
+	
+
+#### **3.1.2. Emotion inference from facial expressions**
+
+1. A  person’s emotions are conspicuous through  their  facial  expressions. We identified the most common emotions expressed by students as anxiety,  anger,  pride,  happiness,  boredom. 
+2. The system proposed will determine  the emotion and also the   frequency   of   the   emotion variation. 
+3. We plan to build an image classfier using transfer learning to detect emotions from the facial representations. 
+4. Capturing the frequency of the predicted emotion  can be done using OpenCV.
+
+| Emotion |Probable Cause|
+|--------------|-----------------------|
+|Laughter,Sadness |Social media, surroundings|
+|Disgust, Anger | personal reasons,People around |
+| Fear | Subject, faculty, peers |
+|Anxiety and restlessness | Personal reasons, performance  pressure, peers |
+| Boredom | Lack of interest in subject, Illness or Tirednes|
+
+
+#### **3.1.3. Drowsiness**
+
+1. Irregular sleep patterns and sleep loss can negatively impact a student’s cognitive performance and emotional stability.
+2. We can measure the sleepiness by calculating the ratio of vertical to horizontal width of the eye of the student during regular intervals of the lecture.
+3. The extent of opening of eyes is a significant indicator to detect how drowsy a person is.
+4. By comparing the ratios regularly, we can identify specific instances of discrepancies in a student's attentiveness.
+
+
+The drowsiness measure, observed emotions, and posture will be combined using a method of weighted averaging to compute a final score called the attentivity index, The weights will be determined experimentally. The preceding frames will be averaged to give the score over a certain time period. If the attentivity score dips below a certain threshold, the teacher can be alerted. Observing the attentivity trends of different students over extended time periods can also allow the teachers to identify those with special needs and accordingly provide assistance to those students.
+
+
+
+### **3.2. Detecting malpractices during online examinations**
+
+![image](https://drive.google.com/uc?export=view&amp;id=1sBPZ5SCxuP8qwSdUFjZg-JzXIjuFnPD-){width=50%}
+
+In case the image does not load, click [here](https://drive.google.com/file/d/1sBPZ5SCxuP8qwSdUFjZg-JzXIjuFnPD-/view?usp=sharing) for implementation diagram
+**Five fold approach** consisting of **facial recognition**, followed by **tracking head, eye and mouth movements,**  along with **detection of cheating material.**
+
+
+We propose the use of three image processing Python Libraries : **[DLIB](https://pypi.org/project/dlib/), [OpenCV](https://opencv.org/) and [OpenFace](https://www.semanticscholar.org/paper/OpenFace%3A-A-general-purpose-face-recognition-with-Amos-Ludwiczuk/82e66c4832386cafcec16b92ac88088ffd1a1bc9).**
+
+DLIB uses histogram based machine learning to generate a mask of a person’s face, See the figure below for reference.
+OpenFace generates a 128 dimensional vector given an image of a person’s face, and the closer two vectors are means the more similar the two people look.
+The video of the candidate will be fed frame by frame to DLIB and OpenFace to generate the mask and vector, respectively.
+The detection modules are as follows :
+
+1. Authentication: The generated feature vector will be compared to the student’s photo ID for similarity, to detect if someone else is giving the test.
+2. Head  pose  estimation : Using the facial image, and the PnP equation, we can solve for the angle of tilt of the head, to determine if the person is looking into or outside of the screen. If the angle of tilt is found to be beyond a threshold, say 25 degrees, the action is marked as suspicious. 
+3. Eye  tracking: If the person’s face is centred, the eyes are tracked to see if the candidate is staring out of the screen. Using the facial landmarks from DLIB library, the eyes will be extracted. Then they are converted to  grayscale and processed to extract the pupil using image processing with OpenCV. This tells us if the eyes are focused on the screen or away from it, perhaps at some book or cheating device.
+4. Speech  detection : The  mouth  is monitored  for  lip  movements. The degree to which the mouth is open is computed using DLIB’s facial landmarks to determine if the candidate is talking or not.
+5. We propose YOLO object detection  for identifying cheating materials such as books, phones etc. YOLO is fast and has very good accuracy.
+
+
+The final “Suspicious flags” detected for the entire duration of the test are fed to a fuzzy  logic classifier to give a verdict of cheating or not.
+The fuzzy logic classifier will have a rule base set for the specific flags and their duration and frequency. The verdict will be returned in terms of probability of there being malpractice.
+
+Face Mask using DLIB            | Head Movement | Eye processing to locate pupil
+:-------------------------:|:-------------------------:|:-------------------------:
+![mg1](https://drive.google.com/uc?export=view&amp;id=1UZwUYH21PT_eNSsz_uxZzu5GhlG-zitS){width=75%} | ![img2](https://drive.google.com/uc?export=view&amp;id=1u9QDhdAGee0BEoZqdYVoyZ3ZDF11TIAl){width=75%} |   ![img3](https://drive.google.com/uc?export=view&amp;id=13v8MQi2FNNEYVG7_qtP1uZCxOQng_QoN){width=75%}
+
+## **4. Technology Stack**
+* Frontend - HTML, CSS, JavaScript, ReactJs
+* Server side - Flask / Django
+* Machine learning libraries - Tensorflow, Keras, OpenCV, Pandas, Sklearn, DLIB, OpenPose, OpenFace
+
+## **5. Limitations**
+* The user must have a working webcam and good internet connectivity.
+* Limited field of view of the laptop webcam.
+* The user must have proper lighting in the room.
 
 ### Results :
 <img src="./media/embeddings.png" width="60%">.
