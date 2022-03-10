@@ -64,15 +64,7 @@ class AlignDlib:
             return []
 
     def getLargestFaceBoundingBox(self, rgbImg, skipMulti=False):
-        """
-        Find the largest face bounding box in an image.
-        :param rgbImg: RGB image to process. Shape: (height, width, 3)
-        :type rgbImg: numpy.ndarray
-        :param skipMulti: Skip image if more than one face detected.
-        :type skipMulti: bool
-        :return: The largest face bounding box in an image, or None.
-        :rtype: dlib.rectangle
-        """
+
         assert rgbImg is not None
 
         faces = self.getAllFaceBoundingBoxes(rgbImg)
@@ -92,25 +84,7 @@ class AlignDlib:
     def align(self, imgDim, rgbImg, bb=None,
               landmarks=None, landmarkIndices=INNER_EYES_AND_BOTTOM_LIP,
               skipMulti=False):
-        r"""align(imgDim, rgbImg, bb=None, landmarks=None, landmarkIndices=INNER_EYES_AND_BOTTOM_LIP)
-        Transform and align a face in an image.
-        :param imgDim: The edge length in pixels of the square the image is resized to.
-        :type imgDim: int
-        :param rgbImg: RGB image to process. Shape: (height, width, 3)
-        :type rgbImg: numpy.ndarray
-        :param bb: Bounding box around the face to align. \
-                   Defaults to the largest face.
-        :type bb: dlib.rectangle
-        :param landmarks: Detected landmark locations. \
-                          Landmarks found on `bb` if not provided.
-        :type landmarks: list of (x,y) tuples
-        :param landmarkIndices: The indices to transform to.
-        :type landmarkIndices: list of ints
-        :param skipMulti: Skip image if more than one face detected.
-        :type skipMulti: bool
-        :return: The aligned RGB image. Shape: (imgDim, imgDim, 3)
-        :rtype: numpy.ndarray
-        """
+
         assert imgDim is not None
         assert rgbImg is not None
         assert landmarkIndices is not None
